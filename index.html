@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skyline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sky" id="sky"></div>
+
+  <main class="stage">
+
+    <header class="masthead">
+      <span class="masthead__mark">☁</span>
+      <h1 class="masthead__title">Skyline</h1>
+    </header>
+
+    <form class="search" id="searchForm" autocomplete="off">
+      <input
+        type="text"
+        id="cityInput"
+        class="search__input"
+        placeholder="Where's the sky today? Try a city…"
+        aria-label="City name"
+      >
+      <button type="submit" class="search__btn">
+        <span>Check</span>
+      </button>
+    </form>
+
+    <p class="hint" id="hint">Type a city and press enter — Ghaziabad, Delhi, Hyderabad…</p>
+
+    <section class="card" id="card" hidden>
+
+      <div class="card__top">
+        <div class="place">
+          <h2 class="place__city" id="cityName">—</h2>
+          <p class="place__meta" id="placeMeta">—</p>
+        </div>
+        <img class="place__icon" id="conditionIcon" alt="" width="72" height="72">
+      </div>
+
+      <div class="temp">
+        <span class="temp__number" id="tempNumber">--</span>
+        <span class="temp__unit">°C</span>
+      </div>
+      <p class="condition" id="conditionText">—</p>
+      <p class="feels" id="feelsLike">—</p>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__label">Humidity</span>
+          <span class="stat__value" id="statHumidity">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">Wind</span>
+          <span class="stat__value" id="statWind">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">UV Index</span>
+          <span class="stat__value" id="statUv">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">Air Quality</span>
+          <span class="stat__value" id="statAqi">—</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="card card--error" id="errorCard" hidden>
+      <p id="errorText">Couldn't find that place. Check the spelling and try again.</p>
+    </section>
+
+    <section class="card card--loading" id="loadingCard" hidden>
+      <p>Reading the sky…</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
