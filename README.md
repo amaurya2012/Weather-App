@@ -31,4 +31,4 @@ A clean, single-page weather app that shows current conditions for any city, sty
 
 ## Live demo
 
-_Add your deployed link here once hosted (e.g. on Vercel)._
+[weather-app-eight-rho-24.vercel.app](https://weather-app-eight-rho-24.vercel.app/)
